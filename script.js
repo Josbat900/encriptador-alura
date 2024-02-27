@@ -25,6 +25,13 @@ function ocultarImagen (){
     divCopiar.style.display = "flex"
 }
 
+//crea una funcion que muestre la imagen
+function mostrarImagen(){
+    imagen.style.display = "flex";
+    noMensaje.style.display = "flex"
+    resultadoEncriptado.style.display = "none"
+    divCopiar.style.display = "none"
+}
 //recuperar el texto del text area
 function recuperarTexto(){
     var areatex = document.querySelector(".areatext")
@@ -33,25 +40,33 @@ function recuperarTexto(){
 
 
 //crear funcion para mostrar el mensaje encriptado
- function mostrarTextoEncriptado(){
-    //mostramos nuestro resultado
-    ocultarImagen();
-    //volvemos nuestra funcion una variable
+function mostrarTextoEncriptado() {
+    //volvemos nuestra funcion del textarea una variable
     let mensajePorEncriptar = recuperarTexto();
-    // llamos nuestro parrafo donde ira el texto encriptado y 
-    // llamos nuestra funcion para encriptar y ponemos de parametro
-    //  la variable en la cual guardamos nuestro mensaje
-    resultadoTexto.textContent = encriptarTexto(mensajePorEncriptar)
-    
- }
+    //en caso que no haya ningun mensaje por encriptar mostrar de nuevo la imagen
+    if (mensajePorEncriptar.length > 0) {
+        //mostramos nuestro resultado
+        ocultarImagen();
+        // llamos nuestro parrafo donde ira el texto encriptado y 
+        // llamos nuestra funcion para encriptar y ponemos de parametro
+        //  la variable en la cual guardamos nuestro mensaje
+        resultadoTexto.textContent = encriptarTexto(mensajePorEncriptar)
+    }else{
+        mostrarImagen();
+    }
+}
 
  //funcion para mostrar el mensaje desencriptado la cual es
  //basicamente igual a la de mostrar el mensaje incriptado
  //con ligeros cambios
  function mostrarTextoDesencriptado(){
-    ocultarImagen();
-    let mensajePorEncriptar = recuperarTexto();
-    resultadoTexto.textContent = desencriptarTexto(mensajePorEncriptar)
+     let mensajePorEncriptar = recuperarTexto();
+     if (mensajePorEncriptar.length > 0) {
+         ocultarImagen();
+         resultadoTexto.textContent = desencriptarTexto(mensajePorEncriptar)
+     }else{
+        mostrarImagen();
+     }
  }
 
  //funcion para copiar el mensaje encriptado o desencriptado
