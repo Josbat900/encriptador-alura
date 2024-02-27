@@ -57,9 +57,6 @@ function recuperarTexto(){
  //funcion para copiar el mensaje encriptado o desencriptado
 
 function copiar() {
-    btnCopiar.addEventListener("click", copiar = () => {
-        var contenido = resultadoTexto.textContent;
-        navigator.clipboard.writeText(contenido);
-        console.log("hola");
-    });
+    var contenido = resultadoTexto.textContent;
+    navigator.clipboard.writeText(contenido);
 }
