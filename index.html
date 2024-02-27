@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encripter app</title>
+    <link rel="icon" href="./icons/icono.ico">
+</head>
+
+<body>
+    <main class="seccion-global">
+        <article class="seccion-1">
+            <h1>
+                <img class="aluraColor" src="./icons/icon.svg">
+            </h1>
+            <form class="form" action="">
+                <textarea class="areatext" name="areatext" id="areatext" cols="60" rows="10"
+                    placeholder="ingrese el texto aqui"></textarea>
+                <div class="box-alerta">
+                    <div class="alerta">
+                        <img src="./icons/alerta.svg">
+                    </div>
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" type="button">
+                        encriptar
+                    </button>
+                    <button class="btn-desencriptar" type="button">
+                        desencriptar
+                    </button>
+                </div>
+            </form>
+        </article>
+
+        <article class="seccion-2">
+            <div class="imagen">
+                <img src="./icons/imagen.svg" width="95%" height="95%">
+            </div>
+            <div class="mensaje-alerta">
+                <h3>Ningun mensaje fue encontrado</h3>
+                <p>ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <div class="resultado-encriptado">
+                <p class="resultado-texto"></p>
+            </div>
+            <div class="div-copiar">
+                <button class="btn-copiar " type="button" value="copiar">copiar</button>
+            </div>
+        </article>
+        <main />
+        <script src="/script.js" type="module"></script>
+</body>
+
+</html>
