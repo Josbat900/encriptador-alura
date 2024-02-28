@@ -1,5 +1,6 @@
 //importamos las funciones que encriptan y desencriptan
 import {encriptarTexto,desencriptarTexto} from "./utils/logic.js"
+import {mostrarSeccionDefault,mostrarSeccionCaracter} from "./utils/showSeccion2.js"
 //botones fijos
 let btnEncriptar = document.querySelector(".btn-encriptar");
 let btnDesencriptar = document.querySelector(".btn-desencriptar");
@@ -43,15 +44,22 @@ function recuperarTexto(){
 function mostrarTextoEncriptado() {
     //volvemos nuestra funcion del textarea una variable
     let mensajePorEncriptar = recuperarTexto();
-    //en caso que no haya ningun mensaje por encriptar mostrar de nuevo la imagen
-    if (mensajePorEncriptar.length > 0) {
-        //mostramos nuestro resultado
-        ocultarImagen();
-        // llamos nuestro parrafo donde ira el texto encriptado y 
-        // llamos nuestra funcion para encriptar y ponemos de parametro
-        //  la variable en la cual guardamos nuestro mensaje
-        resultadoTexto.textContent = encriptarTexto(mensajePorEncriptar)
+    const validacion = /^(?=[a-z0-9!@#$%^&*()_+\-=\[\]{}])[a-z0-9!@#$%^&*()_+\-=\[\]{}\s]+$/.test(mensajePorEncriptar.trim())
+    if (validacion === true) {
+        //en caso que no haya ningun mensaje por encriptar mostrar de nuevo la imagen
+        if (mensajePorEncriptar.length > 0) {
+            //mostramos nuestro resultado
+            ocultarImagen();
+            // llamos nuestro parrafo donde ira el texto encriptado y 
+            // llamos nuestra funcion para encriptar y ponemos de parametro
+            //  la variable en la cual guardamos nuestro mensaje
+            resultadoTexto.textContent = encriptarTexto(mensajePorEncriptar)
+        }
+    }else if(validacion === false && mensajePorEncriptar.length == 0){
+        mostrarSeccionDefault()
+        mostrarImagen();
     }else{
+        mostrarSeccionCaracter()
         mostrarImagen();
     }
 }
@@ -59,15 +67,22 @@ function mostrarTextoEncriptado() {
  //funcion para mostrar el mensaje desencriptado la cual es
  //basicamente igual a la de mostrar el mensaje incriptado
  //con ligeros cambios
- function mostrarTextoDesencriptado(){
-     let mensajePorEncriptar = recuperarTexto();
-     if (mensajePorEncriptar.length > 0) {
-         ocultarImagen();
-         resultadoTexto.textContent = desencriptarTexto(mensajePorEncriptar)
-     }else{
+function mostrarTextoDesencriptado() {
+    let mensajePorEncriptar = recuperarTexto();
+    const validacion = /^(?=[a-z0-9!@#$%^&*()_+\-=\[\]{}])[a-z0-9!@#$%^&*()_+\-=\[\]{}\s]+$/.test(mensajePorEncriptar.trim())
+    if (validacion === true) {
+        if (mensajePorEncriptar.length > 0) {
+            ocultarImagen();
+            resultadoTexto.textContent = desencriptarTexto(mensajePorEncriptar)
+        }
+    } else if (validacion === false && mensajePorEncriptar.length == 0) {
+        mostrarSeccionDefault()
         mostrarImagen();
-     }
- }
+    } else {
+        mostrarSeccionCaracter()
+        mostrarImagen();
+    }
+}
 
  //funcion para copiar el mensaje encriptado o desencriptado
 
