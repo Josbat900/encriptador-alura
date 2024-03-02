@@ -40,7 +40,17 @@ body {
     margin-top: 0%;
 }
 
+.icon-gato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
 .aluraColor{
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7))
+}
+
+.gato{
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7))
 }
 
@@ -223,4 +233,117 @@ body {
 
 .btn-copiar:hover{
     transform: scale(1.08);
+}
+
+/* tablet ipad pro */
+
+@media screen and (max-width: 1024px) {
+    .seccion-global{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+    }
+    .seccion-1{
+        flex-direction: column;
+        width: 87%;
+        height: 70%;
+    }
+    .form{
+        height: 100%;
+    }
+    .icon-gato{
+        flex-direction: row;
+    }
+    
+    .seccion-2{
+        height: 30%;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .imagen{
+        display: none;
+    }
+
+    .mensaje-alerta{
+        height: 80%;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .mensaje-alerta>h3{
+        font-size: 2.875rem;
+        line-height: 2.25rem;
+        margin: 0;
+        
+    }
+    
+    .mensaje-alerta>p{   
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin: 3%;
+        color: #111827;
+    }
+
+    /* resultado */
+
+    .resultado-encriptado{
+        height: 62%;
+        width: auto;
+    }
+
+    .div-copiar{
+        margin: 0;
+        padding: 0;
+        height: 30%;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    .btn-copiar{
+        height: 80%;
+        width: 40%;
+    }
+}
+
+/* celular iphone 12 pro */
+
+@media screen and (max-width: 400px){
+    .seccion-global{
+        padding-bottom: 3%;
+        height: 100vh;
+        width: 100vh;
+    }
+
+    /* .seccion-2 */
+
+    .seccion-2{
+        flex-direction: column;
+        width: 80%;
+    }
+    .imagen{
+        display: none;
+    }
+
+    .mensaje-alerta{
+        width: 90%;
+    }
+
+    .resultado-encriptado{
+        height: 62%;
+        width: auto;
+    }
+
+    .div-copiar{
+        margin: 0;
+        padding: 0;
+        height: 30%;
+        width: auto;
+        justify-content: flex-start;
+    }
+    .btn-copiar{
+        height: 80%;
+        width: 40%;
+    }
 }

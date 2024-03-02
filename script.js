@@ -27,11 +27,17 @@ function ocultarImagen (){
 }
 
 //crea una funcion que muestre la imagen
-function mostrarImagen(){
-    imagen.style.display = "flex";
-    noMensaje.style.display = "flex"
-    resultadoEncriptado.style.display = "none"
-    divCopiar.style.display = "none"
+function mostrarImagen() {
+    if (screen.width > 1024) {
+        imagen.style.display = "flex";
+        noMensaje.style.display = "flex"
+        resultadoEncriptado.style.display = "none"
+        divCopiar.style.display = "none"
+    } else {
+        noMensaje.style.display = "flex"
+        resultadoEncriptado.style.display = "none"
+        divCopiar.style.display = "none"
+    }
 }
 //recuperar el texto del text area
 function recuperarTexto(){
