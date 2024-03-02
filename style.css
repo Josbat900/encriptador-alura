@@ -40,17 +40,17 @@ body {
     margin-top: 0%;
 }
 
-.icon-gato{
+.icon-gato {
     display: flex;
     flex-direction: column;
     justify-content: space-between
 }
 
-.aluraColor{
+.aluraColor {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7))
 }
 
-.gato{
+.gato {
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7))
 }
 
@@ -109,10 +109,10 @@ body {
     border-radius: 120px;
     transition: all 400ms;
     cursor: pointer;
-    box-shadow:  0 0 20px #656167;
+    box-shadow: 0 0 20px #656167;
 }
 
-.btn-encriptar:hover{
+.btn-encriptar:hover {
     background-color: #c3c3c3;
     color: #9405cd;
     transform: scale(1.05);
@@ -129,10 +129,10 @@ body {
     border-radius: 120px;
     transition: all 400ms;
     cursor: pointer;
-    box-shadow:  0 0 20px #656167;
+    box-shadow: 0 0 20px #656167;
 }
 
-.btn-desencriptar:hover{
+.btn-desencriptar:hover {
     background-color: #7704a4;
     color: aliceblue;
     transform: scale(1.05);
@@ -146,14 +146,14 @@ body {
     background-color: #c3c3c3;
     /* #7704a4 */
     width: 34%;
-    box-shadow:  0 0 20px #2e2931;
+    box-shadow: 0 0 20px #2e2931;
     display: flex;
     flex-direction: column;
     padding: 0;
     transition: all 600ms;
 }
 
-.seccion-2:hover{
+.seccion-2:hover {
     transform: scale(1.02);
 }
 
@@ -176,14 +176,14 @@ body {
 }
 
 
-.mensaje-alerta>h3{   
+.mensaje-alerta>h3 {
     font-size: 1.875rem;
     line-height: 2.25rem;
     margin: 0;
-    
+
 }
 
-.mensaje-alerta>p{   
+.mensaje-alerta>p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin: 0;
@@ -201,7 +201,7 @@ body {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.resultado-texto {  
+.resultado-texto {
     word-break: break-all;
     height: 100%;
     margin: 0;
@@ -217,7 +217,7 @@ body {
     justify-content: space-evenly;
 }
 
-.btn-copiar{
+.btn-copiar {
     background-color: #7704a4;
     height: 90%;
     width: 40%;
@@ -226,60 +226,63 @@ body {
     line-height: 1.75rem;
     border: none;
     border-radius: 120px;
-    transition:all 400ms;
+    transition: all 400ms;
     cursor: pointer;
-    box-shadow:  0 0 20px #656167;
+    box-shadow: 0 0 20px #656167;
 }
 
-.btn-copiar:hover{
+.btn-copiar:hover {
     transform: scale(1.08);
 }
 
 /* tablet ipad pro */
 
 @media screen and (max-width: 1024px) {
-    .seccion-global{
+    .seccion-global {
         width: 100vw;
         height: 100vh;
         flex-direction: column;
         align-items: center;
     }
-    .seccion-1{
+
+    .seccion-1 {
         flex-direction: column;
         width: 87%;
         height: 70%;
     }
-    .form{
+
+    .form {
         height: 100%;
     }
-    .icon-gato{
+
+    .icon-gato {
         flex-direction: row;
     }
-    
-    .seccion-2{
+
+    .seccion-2 {
         height: 30%;
         width: 90%;
         flex-direction: column;
     }
 
-    .imagen{
+    .imagen {
         display: none;
     }
 
-    .mensaje-alerta{
+    .mensaje-alerta {
         height: 80%;
         width: 90%;
         justify-content: center;
     }
 
-    .mensaje-alerta>h3{
+    .mensaje-alerta>h3 {
         font-size: 2.875rem;
         line-height: 2.25rem;
         margin: 0;
-        
+
     }
-    
-    .mensaje-alerta>p{   
+
+    .mensaje-alerta>p {
         font-size: 1.5rem;
         line-height: 1.75rem;
         margin: 3%;
@@ -288,12 +291,12 @@ body {
 
     /* resultado */
 
-    .resultado-encriptado{
+    .resultado-encriptado {
         height: 62%;
         width: auto;
     }
 
-    .div-copiar{
+    .div-copiar {
         margin: 0;
         padding: 0;
         height: 30%;
@@ -301,7 +304,7 @@ body {
         justify-content: flex-start;
     }
 
-    .btn-copiar{
+    .btn-copiar {
         height: 80%;
         width: 40%;
     }
@@ -309,8 +312,8 @@ body {
 
 /* celular iphone 12 pro */
 
-@media screen and (max-width: 400px){
-    .seccion-global{
+@media screen and (max-width: 400px) {
+    .seccion-global {
         padding-bottom: 3%;
         height: 100vh;
         width: 100vh;
@@ -318,31 +321,33 @@ body {
 
     /* .seccion-2 */
 
-    .seccion-2{
+    .seccion-2 {
         flex-direction: column;
         width: 80%;
     }
-    .imagen{
+
+    .imagen {
         display: none;
     }
 
-    .mensaje-alerta{
+    .mensaje-alerta {
         width: 90%;
     }
 
-    .resultado-encriptado{
+    .resultado-encriptado {
         height: 62%;
         width: auto;
     }
 
-    .div-copiar{
+    .div-copiar {
         margin: 0;
         padding: 0;
         height: 30%;
         width: auto;
         justify-content: flex-start;
     }
-    .btn-copiar{
+
+    .btn-copiar {
         height: 80%;
         width: 40%;
     }
